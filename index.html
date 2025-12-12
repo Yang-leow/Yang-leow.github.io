@@ -1,634 +1,848 @@
+<!--作者 弟弟 改编自木白原创 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>致创业女王杨勤姐姐的生日祝福</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给创业女王姐姐杨勤的生日惊喜</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
         }
         
         body {
-            font-family: 'Microsoft YaHei'， 'Arial'， sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            overflow-x: hidden;
             min-height: 100vh;
-            color: #333;
-        }
-        
-        .container {
-            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 1s ease;
             overflow: hidden;
-            position: relative;
         }
         
-        /* 开场动画 */
-        .opening {
+        .bg-1 {
+            background: linear-gradient(135deg, #ffecf1 0%, #ffdde7 100%);
+        }
+        
+        .bg-2 {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+        }
+        
+        .bg-3 {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+        }
+        
+        .bg-4 {
+            background: linear-gradient(135deg, #f9f0ff 0%, #f0e6ff 100%);
+        }
+        
+        .bg-5 {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6ffec 100%);
+        }
+        
+        .bg-6 {
+            background: linear-gradient(135deg, #fffaf0 0%, #fff5e6 100%);
+        }
+        
+        .bg-7 {
+            background: linear-gradient(135deg, #f8f0ff 0%, #f0e6ff 100%);
+        }
+        
+        .bg-8 {
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe6ee 100%);
+        }
+        
+        .main-modal {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            transition: opacity 1s ease;
-        }
-        
-        .sister-intro {
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .sister-name {
-            font-size: 3.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-            color: #ffd700;
-        }
-        
-        .sister-title {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-        }
-        
-        .from-brother {
-            position: absolute;
-            bottom: 30px;
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .tap-hint {
-            color: white;
-            font-size: 1.2rem;
-            margin-top: 30px;
-            text-align: center;
-            animation: pulse 2s infinite;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 10px 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            width: 90%;
+            max-width: 420px;
+            background: white;
             border-radius: 20px;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 0.6; transform: scale(0.98); }
-            50% { opacity: 1; transform: scale(1); }
-            100% { opacity: 0.6; transform: scale(0.98); }
-        }
-        
-        /* 主内容 */
-        .main-content {
-            padding: 20px;
-            display: none;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+            padding: 30px;
+            text-align: center;
             opacity: 0;
-            transition: opacity 1s ease;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            border: 3px solid #ffccd5;
         }
         
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            position: relative;
+        .main-modal.active {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
         }
         
-        .birthday-title {
-            font-size: 2.8rem;
-            color: #d81b60;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .entrepreneur-title {
-            font-size: 1.5rem;
-            color: #667eea;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        
-        /* 创业主题装饰 */
-        .entrepreneur-elements {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .element {
-            width: 70px;
-            height: 70px;
-            background: white;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            color: #667eea;
-        }
-        
-        /* 祝福卡片 */
-        .card-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            position: relative;
-            border-left: 5px solid #667eea;
-        }
-        
-        .card-title {
-            color: #d81b60;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .card-content {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #555;
-        }
-        
-        /* 弹窗样式 */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-            display: none;
-        }
-        
-        .popup {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            max-width: 90%;
-            width: 400px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            position: relative;
-            text-align: center;
-            animation: popupAppear 0.5s ease;
-        }
-        
-        @keyframes popupAppear {
-            0% { transform: scale(0.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        
-        .popup-title {
-            color: #d81b60;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        
-        .popup-content {
-            font-size: 1.3rem;
-            line-height: 1.5;
+        .main-modal h2 {
+            color: #ff6b9d;
             margin-bottom: 20px;
-            color: #333;
+            font-size: 28px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         
-        .popup-close {
-            background: #667eea;
+        .main-modal p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            color: #ff6b9d;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .main-modal button {
+            background: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 100%);
             color: white;
             border: none;
-            padding: 10px 30px;
+            padding: 14px 35px;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: 18px;
             cursor: pointer;
-            margin-top: 10px;
-        }
-        
-        .popup-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: #ffd700;
-        }
-        
-        /* 弟弟的祝福部分 */
-        .brother-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px 0;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-        
-        .brother-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #ffd700;
-        }
-        
-        .brother-message {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        .signature {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ffd700;
-            margin-top: 20px;
-        }
-        
-        /* 按钮 */
-        .action-button {
-            display: block;
-            margin: 20px auto;
-            padding: 15px 40px;
-            background: linear-gradient(to right, #667eea, #764ba2);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
             transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+            font-weight: bold;
+            margin-top: 10px;
         }
         
-        .action-button:hover {
+        .main-modal button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 8px 20px rgba(255, 107, 157, 0.6);
         }
         
-        /* 音乐控制 */
+        .mini-modal {
+            position: fixed;
+            width: 200px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            opacity: 0;
+            z-index: 999;
+            cursor: pointer;
+            user-select: none;
+            border: 2px solid #ffccd5;
+        }
+        
+        .mini-modal.effect-1 {
+            transform: scale(0.8) translateY(-30px);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .mini-modal.effect-2 {
+            transform: scale(0.6) translateX(-50px);
+            transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .mini-modal.effect-3 {
+            transform: scale(0.7) rotate(-10deg);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .mini-modal.active.effect-1 {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        
+        .mini-modal.active.effect-2 {
+            opacity: 1;
+            transform: scale(1) translateX(0);
+        }
+        
+        .mini-modal.active.effect-3 {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+        
+        .mini-modal.clicked {
+            animation: clickEffect 0.6s ease;
+        }
+        
+        @keyframes clickEffect {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+        
+        .mini-modal-header {
+            padding: 10px 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+        }
+        
+        .mini-modal-content {
+            padding: 15px;
+            background-color: #fff9fc;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .text-effect-fadein .mini-modal-content {
+            animation: fadeIn 2s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: #ff6b9d;
+            pointer-events: none;
+            z-index: 1000;
+            animation: heartFloat 1s ease-out forwards;
+        }
+        
+        @keyframes heartFloat {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(0, -50px) scale(1.5);
+            }
+        }
+        
         .music-control {
             position: fixed;
-            bottom: 20px;
+            top: 20px;
             right: 20px;
             width: 50px;
             height: 50px;
-            background: #667eea;
+            background: rgba(255, 107, 157, 0.9);
             border-radius: 50%;
             display: flex;
-            justify-content: center;
             align-items: center;
-            color: white;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            z-index: 10;
+            justify-content: center;
             cursor: pointer;
+            z-index: 2000;
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+            transition: all 0.3s ease;
         }
         
-        /* 响应式调整 */
-        @media (max-width: 768px) {
-            .sister-name {
-                font-size: 2.8rem;
-            }
-            
-            .birthday-title {
-                font-size: 2.2rem;
-            }
-            
-            .entrepreneur-title {
-                font-size: 1.3rem;
-            }
-            
-            .card {
-                padding: 20px;
-            }
-            
-            .popup {
-                padding: 20px;
-            }
+        .music-control:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 107, 157, 0.5);
         }
         
-        /* 隐藏音频元素 */
-        #birthday-audio {
+        .music-control.muted {
+            background: rgba(153, 153, 153, 0.7);
+        }
+        
+        .music-icon {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .music-control.muted .music-icon::before {
+            content: "🔇";
+        }
+        
+        .music-control:not(.muted) .music-icon::before {
+            content: "🎵";
+        }
+        
+        .music-control.hidden {
             display: none;
         }
         
-        /* 星星背景 */
-        .stars {
+        .copyright {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
+            bottom: 10px;
+            right: 10px;
+            color: rgba(0, 0, 0, 0.3);
+            font-size: 12px;
+            z-index: 1000;
         }
         
-        .star {
-            position: absolute;
-            background-color: white;
-            border-radius: 50%;
-            animation: twinkle 5s infinite;
+        .header-color-1 { background-color: #ff6b9d; }
+        .header-color-2 { background-color: #ff8fab; }
+        .header-color-3 { background-color: #36c; }
+        .header-color-4 { background-color: #4caf50; }
+        .header-color-5 { background-color: #ff9800; }
+        .header-color-6 { background-color: #9c27b0; }
+        .header-color-7 { background-color: #2196f3; }
+        .header-color-8 { background-color: #ff5722; }
+        .header-color-9 { background-color: #00bcd4; }
+        .header-color-10 { background-color: #8bc34a; }
+        .header-color-11 { background-color: #795548; }
+        .header-color-12 { background-color: #607d8b; }
+        .header-color-13 { background-color: #e91e63; }
+        .header-color-14 { background-color: #3f51b5; }
+        .header-color-15 { background-color: #009688; }
+        .header-color-16 { background-color: #ffc107; }
+        .header-color-17 { background-color: #673ab7; }
+        .header-color-18 { background-color: #f44336; }
+        .header-color-19 { background-color: #cddc39; }
+        .header-color-20 { background-color: #00bcd4; }
+        
+        /* 新增蛋糕图标 */
+        .cake-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
         }
         
-        @keyframes twinkle {
-            0% { opacity: 0.2; }
-            50% { opacity: 1; }
-            100% { opacity: 0.2; }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* 创业图标 */
+        .business-icon {
+            font-size: 30px;
+            margin: 0 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .mini-modal {
+                width: 170px;
+            }
+            
+            .mini-modal-content {
+                font-size: 13px;
+                min-height: 80px;
+                padding: 12px;
+            }
+            
+            .mini-modal-header {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+            
+            .music-control {
+                top: 15px;
+                right: 15px;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .music-icon {
+                font-size: 20px;
+            }
+            
+            .main-modal {
+                padding: 25px;
+                max-width: 350px;
+            }
+            
+            .main-modal h2 {
+                font-size: 24px;
+            }
+        }
+        
+        @keyframes bgChange {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        body.bg-changing {
+            animation: bgChange 1s ease;
+        }
+        
+        /* 创业主题装饰 */
+        .business-decoration {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
         }
     </style>
 </head>
-<body>
-    <!-- 开场动画 -->
-    <div class="opening" id="opening">
-        <div class="sister-intro">
-            <div class="sister-name">杨勤</div>
-            <div class="sister-title">创业女王 · 我的榜样姐姐</div>
-            <div class="sister-title">🎂 生日快乐 🎉</div>
-            <div class="tap-hint">点击屏幕接收弟弟的祝福</div>
-        </div>
-        <div class="from-brother">—— 来自永远支持你的弟弟</div>
+<body class="bg-1">
+    <div id="musicControl" class="music-control hidden">
+        <div class="music-icon"></div>
     </div>
     
-    <!-- 弹窗区域 -->
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="popup">
-            <div class="popup-icon" id="popupIcon">🎉</div>
-            <div class="popup-title" id="popupTitle">生日祝福</div>
-            <div class="popup-content" id="popupContent">祝福内容</div>
-            <button class="popup-close" id="popupClose">继续接收祝福</button>
+    <div class="main-modal" id="mainModal">
+        <div class="cake-icon">🎂</div>
+        <h2>给创业女王姐姐的生日惊喜</h2>
+        <p>亲爱的<span class="highlight">杨勤姐姐</span>：</p>
+        <p>今天是你的生日，也是你创业路上的新起点！</p>
+        <p>作为弟弟，我为你准备了这份特别的礼物，希望你喜欢！</p>
+        <div class="business-decoration">
+            <span class="business-icon">💼</span>
+            <span class="business-icon">🚀</span>
+            <span class="business-icon">💡</span>
+            <span class="business-icon">⭐</span>
         </div>
+        <button id="confirmBtn">打开生日祝福弹窗</button>
     </div>
     
-    <!-- 主内容区域 -->
-    <div class="container">
-        <!-- 星星背景 -->
-        <div class="stars" id="stars"></div>
-        
-        <!-- 主内容 -->
-        <div class="main-content" id="mainContent">
-            <div class="header">
-                <h1 class="birthday-title">🎂 杨勤姐姐生日快乐 🎉</h1>
-                <p class="entrepreneur-title">致我最敬佩的创业女王！</p>
-            </div>
-            
-            <!-- 创业主题装饰 -->
-            <div class="entrepreneur-elements">
-                <div class="element">💼</div>
-                <div class="element">🚀</div>
-                <div class="element">⭐</div>
-                <div class="element">🏆</div>
-                <div class="element">💡</div>
-                <div class="element">🌟</div>
-            </div>
-            
-            <!-- 祝福卡片 -->
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-title"><i class="fas fa-crown"></i> 致创业女王</div>
-                    <div class="card-content">
-                        姐姐，看到你勇敢踏上创业之路，我由衷地敬佩！你的勇气、智慧和毅力是我学习的榜样。愿你的创业之路如星河般璀璨，每一步都踏出属于自己的辉煌！
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-title"><i class="fas fa-heart"></i> 生日祝福</div>
-                    <div class="card-content">
-                        在这个特别的日子里，愿所有的好运、所有的成功、所有的喜悦都围绕着你！新的一岁，愿你的创业项目蒸蒸日上，事业如日中天，生活幸福美满！
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-title"><i class="fas fa-star"></i> 弟弟的承诺</div>
-                    <div class="card-content">
-                        姐姐，无论创业路上遇到什么挑战，弟弟永远是你的后盾！我会一直支持你、鼓励你、为你加油！你不仅是我最爱的姐姐，更是我人生中最敬佩的女性！
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 弟弟的祝福部分 -->
-            <div class="brother-section">
-                <div class="brother-title">来自弟弟的心里话</div>
-                <div class="brother-message">
-                    姐姐，从小到大你都是我的榜样。现在看到你勇敢创业，我既骄傲又心疼。骄傲的是你有如此魄力和能力，心疼的是知道你一定会很辛苦。<br><br>
-                    但请相信，你的努力一定会有回报！你的创业项目一定会成功！因为你不仅有智慧，更有坚韧不拔的毅力和温暖善良的心。<br><br>
-                    生日快乐，我最亲爱的姐姐！愿你永远被幸福包围，事业爱情双丰收！
-                </div>
-                <div class="signature">—— 永远爱你的弟弟 ❤️</div>
-            </div>
-            
-            <!-- 互动按钮 -->
-            <button class="action-button" id="moreBlessings">✨ 接收更多祝福弹窗 ✨</button>
-            <button class="action-button" id="specialMessage">💝 查看弟弟的特别祝福</button>
-        </div>
-        
-        <!-- 音乐控制 -->
-        <div class="music-control" id="musicControl">
-            <i class="fas fa-volume-up" id="musicIcon"></i>
-        </div>
-        
-        <!-- 生日音乐 -->
-        <audio id="birthday-audio" loop>
-            <source src="https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-443.mp3" type="audio/mpeg">
-            您的浏览器不支持音频播放
-        </audio>
-    </div>
+    <div class="copyright">弟弟送给最棒的姐姐 ❤️</div>
 
     <script>
-        // 页面元素
-        const opening = document.getElementById('opening');
-        const mainContent = document.getElementById('mainContent');
-        const musicControl = document.getElementById('musicControl');
-        const musicIcon = document.getElementById('musicIcon');
-        const audio = document.getElementById('birthday-audio');
-        const popupOverlay = document.getElementById('popupOverlay');
-        const popupTitle = document.getElementById('popupTitle');
-        const popupContent = document.getElementById('popupContent');
-        const popupIcon = document.getElementById('popupIcon');
-        const popupClose = document.getElementById('popupClose');
-        const moreBlessingsBtn = document.getElementById('moreBlessings');
-        const specialMessageBtn = document.getElementById('specialMessage');
-        const starsContainer = document.getElementById('stars');
+        function getUrlParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
         
-        // 弹窗祝福语库
-        const blessings = [
-            {icon: "🚀", title: "创业腾飞", content: "愿姐姐的创业项目一飞冲天，势如破竹！"},
-            {icon: "💪", title: "坚韧不拔", content: "创业路上虽有挑战，但姐姐的坚韧定能战胜一切！"},
-            {icon: "💰", title: "财源广进", content: "祝姐姐新的一岁客户不断，订单满满，财源滚滚！"},
-            {icon: "🌟", title: "闪耀之星", content: "姐姐就是最闪耀的创业之星，照亮前行的路！"},
-            {icon: "🤝", title: "贵人相助", content: "愿创业路上常有贵人相助，合作伙伴源源不断！"},
-            {icon: "💡", title: "灵感迸发", content: "祝姐姐创意无限，灵感如泉涌，项目越做越好！"},
-            {icon: "🏆", title: "荣誉加身", content: "期待姐姐登上行业顶峰，收获无数荣誉！"},
-            {icon: "❤️", title: "爱的支持", content: "弟弟永远是你最坚实的后盾，永远支持你！"},
-            {icon: "🎯", title: "目标达成", content: "愿姐姐的每一个创业目标都能顺利实现！"},
-            {icon: "🌈", title: "雨后彩虹", content: "经历风雨方能见彩虹，姐姐的创业定会灿烂辉煌！"}
+        // 姐姐的名字
+        const sisterName = "杨勤";
+        const musicName = getUrlParam('music') || '生日快乐歌';
+        
+        // 生日祝福语，包含创业主题
+        const birthdayMessages = [
+            `杨勤姐姐，生日快乐！愿你的创业之路如星河般璀璨！`,
+            `姐姐，你是最棒的创业女王！生日快乐，事业腾飞！`,
+            `亲爱的杨勤姐姐，生日遇上创业，双喜临门！弟弟永远支持你！`,
+            `姐姐生日快乐！愿你的公司客户不断，订单满满，财源滚滚！`,
+            `创业女王杨勤姐姐，生日快乐！愿你的每一个目标都能实现！`,
+            `姐姐，看到你勇敢创业，我无比骄傲！生日快乐，永远爱你！`,
+            `杨勤姐姐，创业路上虽有挑战，但你的坚韧定能战胜一切！生日快乐！`,
+            `姐姐生日快乐！愿你的创意无限，灵感如泉涌，项目越做越好！`,
+            `给最亲爱的杨勤姐姐：生日快乐，事业有成，爱情甜蜜！`,
+            `姐姐，你是我最敬佩的女性！生日快乐，创业成功！`,
+            `杨勤姐姐生日快乐！期待你登上行业顶峰，收获无数荣誉！`,
+            `姐姐，创业再忙也要照顾好自己！生日快乐，永远健康美丽！`,
+            `亲爱的姐姐，你是弟弟永远的榜样！生日快乐，创业顺利！`,
+            `杨勤姐姐，生日快乐！愿贵人常相助，合作伙伴源源不断！`,
+            `姐姐，你的勇气和智慧让我敬佩！生日快乐，事业爱情双丰收！`,
+            `创业女王生日快乐！杨勤姐姐，愿你的每一天都充满阳光！`,
+            `姐姐，你是最闪耀的创业之星！生日快乐，照亮前行的路！`,
+            `杨勤姐姐，生日快快乐乐！愿你的公司一飞冲天，势如破竹！`,
+            `姐姐，不管创业多辛苦，家里永远是你的港湾！生日快乐！`,
+            `杨勤姐姐，生日快乐！弟弟会一直做你最坚实的后盾！`,
+            `姐姐，你的生日愿望一定都会实现，因为你是最棒的！`,
+            `创业女王杨勤姐姐，生日快乐！愿雨后见彩虹，灿烂辉煌！`,
+            `姐姐生日快乐！等你创业成功了，我要到处炫耀我有个超厉害的姐姐！`,
+            `杨勤姐姐，创业路上你并不孤单，弟弟永远为你加油！生日快乐！`,
+            `姐姐，你的魄力和能力让我骄傲！生日快乐，事业蒸蒸日上！`,
+            `杨勤姐姐生日快乐！愿新的一岁，你的创业项目大获成功！`,
+            `姐姐，你是最美的创业女神！生日快乐，永远幸福！`,
+            `杨勤姐姐，生日快快乐乐！愿你的努力终有回报，梦想成真！`,
+            `姐姐，创业让你更闪耀！生日快乐，我的偶像姐姐！`,
+            `杨勤姐姐，生日快乐！愿你的公司成为行业的标杆！`,
+            `姐姐，你的智慧和善良是成功的保证！生日快乐！`,
+            `创业女王姐姐，生日快乐！愿你的团队强大，公司兴旺！`,
+            `杨勤姐姐，生日快快乐乐！弟弟以你为荣，永远爱你！`,
+            `姐姐，创业让你的人生更精彩！生日快乐，永远年轻！`,
+            `杨勤姐姐，生日快乐！愿你的产品受欢迎，品牌响当当！`,
+            `姐姐，你是最勇敢的创业者！生日快乐，无畏前行！`,
+            `杨勤姐姐，生日快快乐乐！愿你的公司早日上市，成就辉煌！`,
+            `姐姐，你的坚持和毅力让我感动！生日快乐，永远支持你！`,
+            `创业女王杨勤姐姐，生日快乐！愿你平衡事业与生活，幸福美满！`,
+            `姐姐，你是弟弟心中永远的女神！生日快乐，爱你三千遍！`
         ];
         
-        // 特别祝福语
-        const specialMessages = [
-            "姐姐，记得小时候你总是护着我，现在换我来支持你！",
-            "创业再忙也要照顾好自己，按时吃饭，别太累！",
-            "不管遇到什么困难，家里永远是你最温暖的港湾！",
-            "看到你这么努力，弟弟我也要加油，向你看齐！",
-            "你不仅是我的姐姐，更是我人生中最敬佩的女性！",
-            "等你创业成功了，我要到处炫耀我有个超厉害的姐姐！",
-            "姐姐的生日愿望一定都会实现，因为你是最棒的！",
-            "忙完这阵我们一起回家吃妈妈做的饭吧，我想你了！"
+        const bgClasses = ['bg-1', 'bg-2', 'bg-3', 'bg-4', 'bg-5', 'bg-6', 'bg-7', 'bg-8'];
+        const headerClasses = [
+            'header-color-1', 'header-color-2', 'header-color-3', 
+            'header-color-4', 'header-color-5', 'header-color-6',
+            'header-color-7', 'header-color-8', 'header-color-9',
+            'header-color-10', 'header-color-11', 'header-color-12',
+            'header-color-13', 'header-color-14', 'header-color-15',
+            'header-color-16', 'header-color-17', 'header-color-18',
+            'header-color-19', 'header-color-20'
         ];
         
-        // 创建星星背景
-        function createStars() {
-            for (let i = 0; i < 100; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.width = Math.random() * 3 + 1 + 'px';
-                star.style.height = star.style.width;
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 5 + 's';
-                star.style.opacity = Math.random() * 0.7 + 0.3;
-                starsContainer.appendChild(star);
-            }
+        let backgroundMusic = null;
+        let isMusicPlaying = false;
+        let isMusicMuted = false;
+        
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+                   window.innerWidth <= 768;
         }
         
-        // 显示随机弹窗
-        function showRandomPopup() {
-            const blessing = blessings[Math.floor(Math.random() * blessings.length)];
-            popupIcon.textContent = blessing.icon;
-            popupTitle.textContent = blessing.title;
-            popupContent.textContent = blessing.content;
-            popupOverlay.style.display = 'flex';
+        let isDragging = false;
+        let dragOffsetX = 0;
+        let dragOffsetY = 0;
+        let currentDragElement = null;
+        
+        window.addEventListener('DOMContentLoaded', function() {
+            const mainModal = document.getElementById('mainModal');
+            const musicControl = document.getElementById('musicControl');
+            const randomBg = bgClasses[Math.floor(Math.random() * bgClasses.length)];
+            document.body.className = randomBg;
             
-            // 播放提示音
-            playPopupSound();
-        }
-        
-        // 显示特别祝福弹窗
-        function showSpecialPopup() {
-            const message = specialMessages[Math.floor(Math.random() * specialMessages.length)];
-            popupIcon.textContent = "💝";
-            popupTitle.textContent = "弟弟的悄悄话";
-            popupContent.textContent = message;
-            popupOverlay.style.display = 'flex';
+            // 总是显示音乐控制
+            musicControl.classList.remove('hidden');
+            loadBackgroundMusic(musicName);
             
-            // 播放提示音
-            playPopupSound();
+            // 修改页面标题
+            document.title = `给杨勤姐姐的生日惊喜 | 创业女王生日快乐`;
+            
+            setTimeout(() => {
+                mainModal.classList.add('active');
+            }, 300);
+        });
+        
+        function loadBackgroundMusic(songName) {
+            // 使用生日快乐歌
+            const apiUrl = `https://api.jkyai.top/API/wyyyjs.php?msg=${encodeURIComponent(songName)}&n=1`;
+            
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.code === 200 && data.data.media.audio_url) {
+                        backgroundMusic = new Audio(data.data.media.audio_url);
+                        backgroundMusic.loop = true;
+                        backgroundMusic.volume = 0.5;
+                        
+                        document.getElementById('confirmBtn').addEventListener('click', function() {
+                            if (backgroundMusic && !isMusicMuted) {
+                                backgroundMusic.play().catch(e => console.log('自动播放被阻止:', e));
+                                isMusicPlaying = true;
+                            }
+                        });
+                        
+                        setupMusicControl();
+                    } else {
+                        // 如果API失败，使用备选音乐
+                        setupBackupMusic();
+                    }
+                })
+                .catch(error => {
+                    console.error('加载音乐失败:', error);
+                    setupBackupMusic();
+                });
         }
         
-        // 播放弹窗提示音
-        function playPopupSound() {
-            // 创建临时音频元素播放提示音
-            const popSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-magic-sparkles-300.mp3');
-            popSound.volume = 0.3;
-            popSound.play().catch(e => console.log("提示音播放失败"));
+        function setupBackupMusic() {
+            // 备选生日快乐音乐
+            backgroundMusic = new Audio('https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-443.mp3');
+            backgroundMusic.loop = true;
+            backgroundMusic.volume = 0.5;
+            
+            document.getElementById('confirmBtn').addEventListener('click', function() {
+                if (backgroundMusic && !isMusicMuted) {
+                    backgroundMusic.play().catch(e => console.log('自动播放被阻止:', e));
+                    isMusicPlaying = true;
+                }
+            });
+            
+            setupMusicControl();
         }
         
-        // 开始播放音乐
-        function playMusic() {
-            audio.play().then(() => {
-                console.log("音乐开始播放");
-                musicIcon.className = "fas fa-volume-up";
-            }).catch(error => {
-                console.log("自动播放失败，需要用户交互", error);
-                musicIcon.className = "fas fa-volume-mute";
+        function setupMusicControl() {
+            const musicControl = document.getElementById('musicControl');
+            
+            musicControl.addEventListener('click', function() {
+                if (!backgroundMusic) return;
+                
+                if (isMusicMuted) {
+                    backgroundMusic.muted = false;
+                    isMusicMuted = false;
+                    musicControl.classList.remove('muted');
+                    
+                    if (!isMusicPlaying) {
+                        backgroundMusic.play().catch(e => console.log('播放失败:', e));
+                        isMusicPlaying = true;
+                    }
+                } else {
+                    backgroundMusic.muted = true;
+                    isMusicMuted = true;
+                    musicControl.classList.add('muted');
+                }
             });
         }
         
-        // 切换音乐播放状态
-        function toggleMusic() {
-            if (audio.paused) {
-                audio.play();
-                musicIcon.className = "fas fa-volume-up";
+        document.getElementById('confirmBtn').addEventListener('click', function() {
+            const mainModal = document.getElementById('mainModal');
+            mainModal.classList.remove('active');
+            
+            setTimeout(() => {
+                startMiniModals();
+            }, 500);
+        });
+        
+        function startMiniModals() {
+            let modalCount = 0;
+            const isMobile = isMobileDevice();
+            const maxModals = isMobile ? 80 : 200;
+            
+            const interval = setInterval(() => {
+                if (modalCount >= maxModals) {
+                    clearInterval(interval);
+                    // 显示最终祝福
+                    setTimeout(() => {
+                        showFinalBlessing();
+                    }, 2000);
+                    return;
+                }
+                
+                const numToCreate = Math.random() > 0.5 ? 2 : 1;
+                
+                for (let i = 0; i < numToCreate; i++) {
+                    if (modalCount < maxModals) {
+                        createMiniModal(isMobile);
+                        modalCount++;
+                    }
+                }
+            }, 300);
+        }
+        
+        function createMiniModal(isMobile) {
+            const modal = document.createElement('div');
+            modal.className = 'mini-modal';
+            
+            const effectNum = Math.floor(Math.random() * 3) + 1;
+            modal.classList.add(`effect-${effectNum}`);
+            
+            const textEffectRandom = Math.random();
+            if (textEffectRandom < 0.2) {
+                modal.classList.add('text-effect-fadein');
+            }
+            
+            const headerClass = headerClasses[Math.floor(Math.random() * headerClasses.length)];
+            const message = birthdayMessages[Math.floor(Math.random() * birthdayMessages.length)];
+            
+            modal.innerHTML = `
+                <div class="mini-modal-header ${headerClass}">🎂生日祝福</div>
+                <div class="mini-modal-content">${message}</div>
+            `;
+            
+            let randomX, randomY;
+            if (isMobile) {
+                const extraMargin = 50;
+                randomX = Math.floor(Math.random() * (window.innerWidth + 2 * extraMargin)) - extraMargin;
+                randomY = Math.floor(Math.random() * (window.innerHeight + 2 * extraMargin)) - extraMargin;
             } else {
-                audio.pause();
-                musicIcon.className = "fas fa-volume-mute";
+                const maxX = window.innerWidth - 220;
+                const maxY = window.innerHeight - 160;
+                randomX = Math.max(10, Math.floor(Math.random() * maxX));
+                randomY = Math.max(10, Math.floor(Math.random() * maxY));
+            }
+            
+            modal.style.left = `${randomX}px`;
+            modal.style.top = `${randomY}px`;
+            
+            let rotation = 0;
+            if (Math.random() < 0.3) {
+                rotation = (Math.random() * 10) - 5;
+            }
+            
+            switch(effectNum) {
+                case 1:
+                    modal.style.transform = `scale(0.8) translateY(-30px) rotate(${rotation}deg)`;
+                    break;
+                case 2:
+                    modal.style.transform = `scale(0.6) translateX(-50px) rotate(${rotation}deg)`;
+                    break;
+                case 3:
+                    modal.style.transform = `scale(0.7) rotate(${rotation - 10}deg)`;
+                    break;
+            }
+            
+            document.body.appendChild(modal);
+            
+            addModalInteractions(modal);
+            
+            setTimeout(() => {
+                modal.classList.add('active');
+                modal.style.transform = `scale(1) translate(0) rotate(${rotation}deg)`;
+            }, 50);
+            
+            // 随机改变背景颜色
+            if (Math.random() < 0.1) {
+                changeBackgroundColor();
             }
         }
         
-        // 开始随机弹窗
-        function startRandomPopups() {
-            // 初始延迟后开始
+        function changeBackgroundColor() {
+            const currentClass = document.body.className;
+            let newClass;
+            do {
+                newClass = bgClasses[Math.floor(Math.random() * bgClasses.length)];
+            } while (newClass === currentClass);
+            
+            document.body.classList.add('bg-changing');
+            document.body.className = newClass;
+            
             setTimeout(() => {
-                // 第一次弹窗
-                showRandomPopup();
-                
-                // 设置定时器，每15-25秒随机弹窗
-                setInterval(() => {
-                    showRandomPopup();
-                }, 15000 + Math.random() * 10000);
-                
-                // 每30秒显示一次特别祝福
-                setInterval(() => {
-                    showSpecialPopup();
-                }, 30000);
-            }, 5000);
+                document.body.classList.remove('bg-changing');
+            }, 1000);
         }
         
-        // 页面初始化
-        function init() {
-            createStars();
+        function addModalInteractions(modal) {
+            let clickTimer = null;
+            let isDoubleClick = false;
             
-            // 点击开场画面开始
-            opening.addEventListener('click', function() {
-                opening.style.opacity = '0';
+            modal.addEventListener('click', function(e) {
+                if (isDoubleClick) {
+                    isDoubleClick = false;
+                    return;
+                }
                 
-                setTimeout(() => {
-                    opening.style.display = 'none';
-                    mainContent.style.display = 'block';
+                if (clickTimer) {
+                    clearTimeout(clickTimer);
+                    clickTimer = null;
+                    isDoubleClick = true;
+                    closeModal(modal);
+                    return;
+                }
+                
+                clickTimer = setTimeout(() => {
+                    clickTimer = null;
+                    modal.classList.add('clicked');
+                    createHeartAnimation(e.clientX, e.clientY);
+                    
+                    // 添加生日特效
+                    if (Math.random() < 0.3) {
+                        createBirthdayEffect(e.clientX, e.clientY);
+                    }
                     
                     setTimeout(() => {
-                        mainContent.style.opacity = '1';
-                        // 尝试播放音乐
-                        playMusic();
-                        // 开始随机弹窗
-                        startRandomPopups();
-                    }, 300);
-                }, 800);
+                        modal.classList.remove('clicked');
+                    }, 600);
+                }, 300);
             });
             
-            // 音乐控制按钮
-            musicControl.addEventListener('click', toggleMusic);
+            modal.addEventListener('mousedown', startDrag);
+            modal.addEventListener('touchstart', startDrag);
             
-            // 弹窗关闭按钮
-            popupClose.addEventListener('click', function() {
-                popupOverlay.style.display = 'none';
-            });
+            function startDrag(e) {
+                e.preventDefault();
+                isDragging = true;
+                currentDragElement = modal;
+                
+                const rect = modal.getBoundingClientRect();
+                if (e.type === 'mousedown') {
+                    dragOffsetX = e.clientX - rect.left;
+                    dragOffsetY = e.clientY - rect.top;
+                } else {
+                    dragOffsetX = e.touches[0].clientX - rect.left;
+                    dragOffsetY = e.touches[0].clientY - rect.top;
+                }
+                
+                modal.style.transition = 'none';
+                modal.style.zIndex = '1001';
+                
+                document.addEventListener('mousemove', onDrag);
+                document.addEventListener('touchmove', onDrag);
+                document.addEventListener('mouseup', stopDrag);
+                document.addEventListener('touchend', stopDrag);
+            }
             
-            // 更多祝福按钮
-            moreBlessingsBtn.addEventListener('click', showRandomPopup);
+            function onDrag(e) {
+                if (!isDragging || currentDragElement !== modal) return;
+                
+                e.preventDefault();
+                let clientX, clientY;
+                
+                if (e.type === 'mousemove') {
+                    clientX = e.clientX;
+                    clientY = e.clientY;
+                } else {
+                    clientX = e.touches[0].clientX;
+                    clientY = e.touches[0].clientY;
+                }
+                
+                modal.style.left = `${clientX - dragOffsetX}px`;
+                modal.style.top = `${clientY - dragOffsetY}px`;
+            }
             
-            // 特别祝福按钮
-            specialMessageBtn.addEventListener('click', showSpecialPopup);
-            
-            // 微信内自动播放音乐处理
-            document.addEventListener('WeixinJSBridgeReady', function() {
-                playMusic();
-            }, false);
-            
-            // 其他浏览器处理
-            document.addEventListener('touchstart', function firstTouch() {
-                playMusic();
-                document.removeEventListener('touchstart', firstTouch, false);
-            }, false);
+            function stopDrag() {
+                isDragging = false;
+                currentDragElement = null;
+                modal.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                modal.style.zIndex = '999';
+                
+                document.removeEventListener('mousemove', onDrag);
+                document.removeEventListener('touchmove', onDrag);
+                document.removeEventListener('mouseup', stopDrag);
+                document.removeEventListener('touchend', stopDrag);
+            }
         }
         
-        // 页面加载完成后初始化
-        window.addEventListener('DOMContentLoaded', init);
+        function createHeartAnimation(x, y) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = `${x - 10}px`;
+            heart.style.top = `${y - 10}px`;
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 1000);
+        }
+        
+        function createBirthdayEffect(x, y) {
+            const effects = ['🎂', '🎉', '🎁', '⭐', '✨', '💝'];
+            const effect = effects[Math.floor(Math.random() * effects.length)];
+            
+            const effectEl = document.createElement('div');
+            effectEl.className = 'heart';
+            effectEl.innerHTML = effect;
+            effectEl.style.left = `${x - 10}px`;
+            effectEl.style.top = `${y - 10}px`;
+            effectEl.style.fontSize = '28px';
+            
+            document.body.appendChild(effectEl);
+            
+            setTimeout(() => {
+                effectEl.remove();
+            }, 1000);
+        }
+        
+        function closeModal(modal) {
+            modal.style.transition = 'all 0.3s ease';
+            modal.style.opacity = '0';
+            modal.style.transform = 'scale(0.5)';
+            
+            setTimeout(() => {
+                if (modal.parentNode) {
+                    modal.parentNode.removeChild(modal);
+                }
+            }, 300);
+        }
+        
+        function showFinalBlessing() {
+            const finalModal = document.createElement('div');
+            finalModal.className = 'main-modal';
+            finalModal.innerHTML = `
+                <div class="cake-icon">🎂</div>
+                <h2>杨勤姐姐，生日快乐！</h2>
+                <p>亲爱的姐姐：</p>
+                <p>你是最棒的创业女王，也是我心中永远的榜样！</p>
+                <p>愿你的创业之路一帆风顺，事业腾飞！</p>
+                <p>愿你的每一天都充满阳光与欢笑！</p>
+                <p>弟弟永远支持你，爱你！❤️</p>
+                <div class="business-decoration">
+                    <span class="business-icon">💼</span>
+                    <span class="business-icon">🚀</span>
+                    <span class="business-icon">💡</span>
+                    <span class="business-icon">⭐</span>
+                    <span class="business-icon">🏆</span>
+                </div>
+                <button id="restartBtn">再看一次祝福</button>
+            `;
+            
+            document.body.appendChild(finalModal);
+            
+            setTimeout(() => {
+                finalModal.classList.add('active');
+            }, 100);
+            
+            finalModal.querySelector('#restartBtn').addEventListener('click', function() {
+                finalModal.classList.remove('active');
+                setTimeout(() => {
+                    finalModal.remove();
+                    location.reload();
+                }, 500);
+            });
+        }
     </script>
 </body>
 </html>
-
