@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>生日快乐祝福</title>
+    <title>致创业女王杨勤姐姐的生日祝福</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,7 +14,7 @@
         
         body {
             font-family: 'Microsoft YaHei', 'Arial', sans-serif;
-            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             overflow-x: hidden;
             min-height: 100vh;
             color: #333;
@@ -33,7 +33,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #ff4081, #7b1fa2);
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -42,26 +42,47 @@
             transition: opacity 1s ease;
         }
         
-        .countdown {
-            font-size: 5rem;
+        .sister-intro {
             color: white;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            margin-bottom: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .sister-name {
+            font-size: 3.5rem;
             font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            color: #ffd700;
+        }
+        
+        .sister-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        
+        .from-brother {
+            position: absolute;
+            bottom: 30px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
         }
         
         .tap-hint {
             color: white;
             font-size: 1.2rem;
-            margin-top: 20px;
+            margin-top: 30px;
             text-align: center;
             animation: pulse 2s infinite;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
         }
         
         @keyframes pulse {
-            0% { opacity: 0.6; }
-            50% { opacity: 1; }
-            100% { opacity: 0.6; }
+            0% { opacity: 0.6; transform: scale(0.98); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0.6; transform: scale(0.98); }
         }
         
         /* 主内容 */
@@ -75,202 +96,188 @@
         .header {
             text-align: center;
             margin-bottom: 30px;
+            position: relative;
         }
         
         .birthday-title {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: #d81b60;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         
-        .birthday-subtitle {
-            font-size: 1.3rem;
-            color: #7b1fa2;
+        .entrepreneur-title {
+            font-size: 1.5rem;
+            color: #667eea;
+            font-weight: bold;
+            margin-top: 10px;
         }
         
-        /* 蛋糕部分 */
-        .cake-container {
+        /* 创业主题装饰 */
+        .entrepreneur-elements {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
             margin: 30px 0;
         }
         
-        .cake {
-            position: relative;
-            width: 200px;
-            height: 120px;
-            margin-bottom: 40px;
+        .element {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            color: #667eea;
         }
         
-        .layer {
-            position: absolute;
-            border-radius: 10px;
+        /* 祝福卡片 */
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 30px 0;
         }
         
-        .bottom-layer {
-            width: 180px;
-            height: 60px;
-            background: linear-gradient(to bottom, #ff9800, #f57c00);
-            bottom: 0;
-            left: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .middle-layer {
-            width: 140px;
-            height: 50px;
-            background: linear-gradient(to bottom, #e91e63, #c2185b);
-            bottom: 50px;
-            left: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .top-layer {
-            width: 100px;
-            height: 40px;
-            background: linear-gradient(to bottom, #4caf50, #2e7d32);
-            bottom: 90px;
-            left: 50px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .candle {
-            position: absolute;
-            width: 8px;
-            height: 30px;
-            background: #ffeb3b;
-            border-radius: 4px;
-            bottom: 130px;
-            left: 96px;
-            z-index: 5;
-        }
-        
-        .flame {
-            position: absolute;
-            width: 15px;
-            height: 25px;
-            background: linear-gradient(to bottom, #ff9800, #ff5722);
-            border-radius: 50% 50% 20% 20%;
-            bottom: 155px;
-            left: 93px;
-            animation: flicker 0.5s infinite alternate;
-            box-shadow: 0 0 15px #ff9800;
-        }
-        
-        @keyframes flicker {
-            0% { transform: scale(1); opacity: 0.9; }
-            100% { transform: scale(1.05); opacity: 1; }
-        }
-        
-        /* 祝福语部分 */
-        .message-container {
-            background: rgba(255, 255, 255, 0.9);
+        .card {
+            background: white;
             border-radius: 15px;
             padding: 25px;
-            margin: 20px 0;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             position: relative;
-            border: 2px dashed #e91e63;
+            border-left: 5px solid #667eea;
         }
         
-        .recipient-name {
+        .card-title {
             color: #d81b60;
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
-        .birthday-message {
+        .card-content {
             font-size: 1.2rem;
             line-height: 1.6;
-            text-align: center;
             color: #555;
         }
         
-        .signature {
-            text-align: right;
-            margin-top: 20px;
-            font-style: italic;
-            color: #7b1fa2;
-            font-weight: bold;
-        }
-        
-        /* 气球动画 */
-        .balloons {
+        /* 弹窗样式 */
+        .popup-overlay {
             position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
-            z-index: -1;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            display: none;
         }
         
-        .balloon {
-            position: absolute;
-            width: 50px;
-            height: 60px;
-            border-radius: 50%;
-            bottom: -100px;
-            animation: floatUp 15s linear infinite;
+        .popup {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 90%;
+            width: 400px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+            text-align: center;
+            animation: popupAppear 0.5s ease;
         }
         
-        .balloon:before {
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: 50px;
-            background: #888;
-            bottom: -50px;
-            left: 24px;
+        @keyframes popupAppear {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
         }
         
-        .balloon:nth-child(1) {
-            background: radial-gradient(circle at 30% 30%, #ff4081, #d81b60);
-            left: 10%;
-            animation-delay: 0s;
+        .popup-title {
+            color: #d81b60;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
         }
         
-        .balloon:nth-child(2) {
-            background: radial-gradient(circle at 30% 30%, #7b1fa2, #4a148c);
-            left: 25%;
-            animation-delay: 1.5s;
+        .popup-content {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #333;
         }
         
-        .balloon:nth-child(3) {
-            background: radial-gradient(circle at 30% 30%, #2196f3, #0d47a1);
-            left: 40%;
-            animation-delay: 3s;
+        .popup-close {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 10px;
         }
         
-        .balloon:nth-child(4) {
-            background: radial-gradient(circle at 30% 30%, #4caf50, #1b5e20);
-            left: 55%;
-            animation-delay: 4.5s;
+        .popup-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ffd700;
         }
         
-        .balloon:nth-child(5) {
-            background: radial-gradient(circle at 30% 30%, #ff9800, #e65100);
-            left: 70%;
-            animation-delay: 6s;
+        /* 弟弟的祝福部分 */
+        .brother-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
         }
         
-        .balloon:nth-child(6) {
-            background: radial-gradient(circle at 30% 30%, #00bcd4, #006064);
-            left: 85%;
-            animation-delay: 7.5s;
+        .brother-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffd700;
         }
         
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(20deg);
-                opacity: 0;
-            }
+        .brother-message {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .signature {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-top: 20px;
+        }
+        
+        /* 按钮 */
+        .action-button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 40px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .action-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
         }
         
         /* 音乐控制 */
@@ -280,7 +287,7 @@
             right: 20px;
             width: 50px;
             height: 50px;
-            background: #7b1fa2;
+            background: #667eea;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -294,121 +301,139 @@
         
         /* 响应式调整 */
         @media (max-width: 768px) {
+            .sister-name {
+                font-size: 2.8rem;
+            }
+            
             .birthday-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
-            .birthday-subtitle {
-                font-size: 1.1rem;
+            .entrepreneur-title {
+                font-size: 1.3rem;
             }
             
-            .message-container {
+            .card {
                 padding: 20px;
-                margin: 15px;
             }
             
-            .recipient-name {
-                font-size: 1.5rem;
+            .popup {
+                padding: 20px;
             }
-            
-            .birthday-message {
-                font-size: 1.1rem;
-            }
-        }
-        
-        /* 祝福按钮 */
-        .wish-button {
-            display: block;
-            margin: 30px auto;
-            padding: 15px 40px;
-            background: linear-gradient(to right, #ff4081, #7b1fa2);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(123, 31, 162, 0.4);
-            transition: all 0.3s ease;
-        }
-        
-        .wish-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(123, 31, 162, 0.6);
-        }
-        
-        /* 特效文字 */
-        .sparkle-text {
-            background: linear-gradient(45deg, #ff4081, #7b1fa2, #2196f3);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: gradientMove 3s ease infinite;
-        }
-        
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
         
         /* 隐藏音频元素 */
         #birthday-audio {
             display: none;
         }
+        
+        /* 星星背景 */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
     </style>
 </head>
 <body>
-    <!-- 开场倒计时 -->
+    <!-- 开场动画 -->
     <div class="opening" id="opening">
-        <div class="countdown" id="countdown">3</div>
-        <div class="tap-hint">点击屏幕开始祝福</div>
+        <div class="sister-intro">
+            <div class="sister-name">杨勤</div>
+            <div class="sister-title">创业女王 · 我的榜样姐姐</div>
+            <div class="sister-title">🎂 生日快乐 🎉</div>
+            <div class="tap-hint">点击屏幕接收弟弟的祝福</div>
+        </div>
+        <div class="from-brother">—— 来自永远支持你的弟弟</div>
+    </div>
+    
+    <!-- 弹窗区域 -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <div class="popup-icon" id="popupIcon">🎉</div>
+            <div class="popup-title" id="popupTitle">生日祝福</div>
+            <div class="popup-content" id="popupContent">祝福内容</div>
+            <button class="popup-close" id="popupClose">继续接收祝福</button>
+        </div>
     </div>
     
     <!-- 主内容区域 -->
     <div class="container">
-        <!-- 气球背景 -->
-        <div class="balloons">
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-        </div>
+        <!-- 星星背景 -->
+        <div class="stars" id="stars"></div>
         
         <!-- 主内容 -->
         <div class="main-content" id="mainContent">
             <div class="header">
-                <h1 class="birthday-title sparkle-text">🎂 生日快乐 🎉</h1>
-                <p class="birthday-subtitle">送上最真挚的祝福，愿你每一天都充满阳光与欢笑</p>
+                <h1 class="birthday-title">🎂 杨勤姐姐生日快乐 🎉</h1>
+                <p class="entrepreneur-title">致我最敬佩的创业女王！</p>
             </div>
             
-            <!-- 蛋糕 -->
-            <div class="cake-container">
-                <div class="cake">
-                    <div class="layer bottom-layer"></div>
-                    <div class="layer middle-layer"></div>
-                    <div class="layer top-layer"></div>
-                    <div class="candle"></div>
-                    <div class="flame" id="flame"></div>
+            <!-- 创业主题装饰 -->
+            <div class="entrepreneur-elements">
+                <div class="element">💼</div>
+                <div class="element">🚀</div>
+                <div class="element">⭐</div>
+                <div class="element">🏆</div>
+                <div class="element">💡</div>
+                <div class="element">🌟</div>
+            </div>
+            
+            <!-- 祝福卡片 -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-title"><i class="fas fa-crown"></i> 致创业女王</div>
+                    <div class="card-content">
+                        姐姐，看到你勇敢踏上创业之路，我由衷地敬佩！你的勇气、智慧和毅力是我学习的榜样。愿你的创业之路如星河般璀璨，每一步都踏出属于自己的辉煌！
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><i class="fas fa-heart"></i> 生日祝福</div>
+                    <div class="card-content">
+                        在这个特别的日子里，愿所有的好运、所有的成功、所有的喜悦都围绕着你！新的一岁，愿你的创业项目蒸蒸日上，事业如日中天，生活幸福美满！
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><i class="fas fa-star"></i> 弟弟的承诺</div>
+                    <div class="card-content">
+                        姐姐，无论创业路上遇到什么挑战，弟弟永远是你的后盾！我会一直支持你、鼓励你、为你加油！你不仅是我最爱的姐姐，更是我人生中最敬佩的女性！
+                    </div>
                 </div>
             </div>
             
-            <!-- 祝福语 -->
-            <div class="message-container">
-                <div class="recipient-name" id="recipientName">亲爱的朋友</div>
-                <div class="birthday-message">
-                    <p>在这特别的日子里，愿所有的幸福、所有的快乐、所有的温馨、所有的好运，都围绕在你身边！</p>
-                    <p>愿你的每一个愿望都能实现，每一个梦想都能成真，每一天都充满阳光和欢笑。</p>
-                    <p>祝你生日快乐，岁岁平安，年年有今日，岁岁有今朝！</p>
+            <!-- 弟弟的祝福部分 -->
+            <div class="brother-section">
+                <div class="brother-title">来自弟弟的心里话</div>
+                <div class="brother-message">
+                    姐姐，从小到大你都是我的榜样。现在看到你勇敢创业，我既骄傲又心疼。骄傲的是你有如此魄力和能力，心疼的是知道你一定会很辛苦。<br><br>
+                    但请相信，你的努力一定会有回报！你的创业项目一定会成功！因为你不仅有智慧，更有坚韧不拔的毅力和温暖善良的心。<br><br>
+                    生日快乐，我最亲爱的姐姐！愿你永远被幸福包围，事业爱情双丰收！
                 </div>
-                <div class="signature">—— 来自关心你的朋友</div>
+                <div class="signature">—— 永远爱你的弟弟 ❤️</div>
             </div>
             
-            <!-- 吹蜡烛按钮 -->
-            <button class="wish-button" id="blowCandle">🎂 吹蜡烛许愿 🕯️</button>
+            <!-- 互动按钮 -->
+            <button class="action-button" id="moreBlessings">✨ 接收更多祝福弹窗 ✨</button>
+            <button class="action-button" id="specialMessage">💝 查看弟弟的特别祝福</button>
         </div>
         
         <!-- 音乐控制 -->
@@ -426,53 +451,94 @@
     <script>
         // 页面元素
         const opening = document.getElementById('opening');
-        const countdownElement = document.getElementById('countdown');
         const mainContent = document.getElementById('mainContent');
         const musicControl = document.getElementById('musicControl');
         const musicIcon = document.getElementById('musicIcon');
         const audio = document.getElementById('birthday-audio');
-        const flame = document.getElementById('flame');
-        const blowCandleButton = document.getElementById('blowCandle');
-        const recipientName = document.getElementById('recipientName');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const popupTitle = document.getElementById('popupTitle');
+        const popupContent = document.getElementById('popupContent');
+        const popupIcon = document.getElementById('popupIcon');
+        const popupClose = document.getElementById('popupClose');
+        const moreBlessingsBtn = document.getElementById('moreBlessings');
+        const specialMessageBtn = document.getElementById('specialMessage');
+        const starsContainer = document.getElementById('stars');
         
-        // 从URL获取参数设置收件人名字
-        function getUrlParams() {
-            const params = new URLSearchParams(window.location.search);
-            const name = params.get('name') || '亲爱的朋友';
-            return { name };
+        // 弹窗祝福语库
+        const blessings = [
+            {icon: "🚀", title: "创业腾飞", content: "愿姐姐的创业项目一飞冲天，势如破竹！"},
+            {icon: "💪", title: "坚韧不拔", content: "创业路上虽有挑战，但姐姐的坚韧定能战胜一切！"},
+            {icon: "💰", title: "财源广进", content: "祝姐姐新的一岁客户不断，订单满满，财源滚滚！"},
+            {icon: "🌟", title: "闪耀之星", content: "姐姐就是最闪耀的创业之星，照亮前行的路！"},
+            {icon: "🤝", title: "贵人相助", content: "愿创业路上常有贵人相助，合作伙伴源源不断！"},
+            {icon: "💡", title: "灵感迸发", content: "祝姐姐创意无限，灵感如泉涌，项目越做越好！"},
+            {icon: "🏆", title: "荣誉加身", content: "期待姐姐登上行业顶峰，收获无数荣誉！"},
+            {icon: "❤️", title: "爱的支持", content: "弟弟永远是你最坚实的后盾，永远支持你！"},
+            {icon: "🎯", title: "目标达成", content: "愿姐姐的每一个创业目标都能顺利实现！"},
+            {icon: "🌈", title: "雨后彩虹", content: "经历风雨方能见彩虹，姐姐的创业定会灿烂辉煌！"}
+        ];
+        
+        // 特别祝福语
+        const specialMessages = [
+            "姐姐，记得小时候你总是护着我，现在换我来支持你！",
+            "创业再忙也要照顾好自己，按时吃饭，别太累！",
+            "不管遇到什么困难，家里永远是你最温暖的港湾！",
+            "看到你这么努力，弟弟我也要加油，向你看齐！",
+            "你不仅是我的姐姐，更是我人生中最敬佩的女性！",
+            "等你创业成功了，我要到处炫耀我有个超厉害的姐姐！",
+            "姐姐的生日愿望一定都会实现，因为你是最棒的！",
+            "忙完这阵我们一起回家吃妈妈做的饭吧，我想你了！"
+        ];
+        
+        // 创建星星背景
+        function createStars() {
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.opacity = Math.random() * 0.7 + 0.3;
+                starsContainer.appendChild(star);
+            }
         }
         
-        // 设置收件人名字
-        function setRecipientName() {
-            const { name } = getUrlParams();
-            recipientName.textContent = `亲爱的 ${name}`;
+        // 显示随机弹窗
+        function showRandomPopup() {
+            const blessing = blessings[Math.floor(Math.random() * blessings.length)];
+            popupIcon.textContent = blessing.icon;
+            popupTitle.textContent = blessing.title;
+            popupContent.textContent = blessing.content;
+            popupOverlay.style.display = 'flex';
             
-            // 更新页面标题
-            document.title = `生日快乐 - ${name}`;
+            // 播放提示音
+            playPopupSound();
         }
         
-        // 倒计时函数
-        function startCountdown() {
-            let count = 3;
-            const countdownInterval = setInterval(() => {
-                countdownElement.textContent = count;
-                count--;
-                
-                if (count < 0) {
-                    clearInterval(countdownInterval);
-                    countdownElement.textContent = "🎉";
-                    
-                    // 倒计时结束后显示提示
-                    setTimeout(() => {
-                        opening.style.opacity = '0.8';
-                    }, 500);
-                }
-            }, 800);
+        // 显示特别祝福弹窗
+        function showSpecialPopup() {
+            const message = specialMessages[Math.floor(Math.random() * specialMessages.length)];
+            popupIcon.textContent = "💝";
+            popupTitle.textContent = "弟弟的悄悄话";
+            popupContent.textContent = message;
+            popupOverlay.style.display = 'flex';
+            
+            // 播放提示音
+            playPopupSound();
+        }
+        
+        // 播放弹窗提示音
+        function playPopupSound() {
+            // 创建临时音频元素播放提示音
+            const popSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-magic-sparkles-300.mp3');
+            popSound.volume = 0.3;
+            popSound.play().catch(e => console.log("提示音播放失败"));
         }
         
         // 开始播放音乐
         function playMusic() {
-            // 微信内需要用户交互才能播放音频
             audio.play().then(() => {
                 console.log("音乐开始播放");
                 musicIcon.className = "fas fa-volume-up";
@@ -493,38 +559,28 @@
             }
         }
         
-        // 吹蜡烛函数
-        function blowCandle() {
-            // 蜡烛火焰动画
-            flame.style.animation = 'none';
-            flame.style.opacity = '0';
-            flame.style.transform = 'scale(0.5)';
-            
-            // 显示许愿文字
-            blowCandleButton.textContent = "✨ 愿望已送达 ✨";
-            blowCandleButton.style.background = "linear-gradient(to right, #4caf50, #2e7d32)";
-            
-            // 添加祝福特效
-            const messageContainer = document.querySelector('.message-container');
-            const wishText = document.createElement('div');
-            wishText.className = 'birthday-message';
-            wishText.innerHTML = `<p style="color:#d81b60; font-weight:bold; margin-top:15px;">🎉 愿你的愿望全部实现！ 🎉</p>`;
-            messageContainer.appendChild(wishText);
-            
-            // 3秒后恢复按钮
+        // 开始随机弹窗
+        function startRandomPopups() {
+            // 初始延迟后开始
             setTimeout(() => {
-                blowCandleButton.textContent = "🎂 再次许愿 🕯️";
-                blowCandleButton.style.background = "linear-gradient(to right, #ff4081, #7b1fa2)";
-                flame.style.animation = 'flicker 0.5s infinite alternate';
-                flame.style.opacity = '1';
-                flame.style.transform = 'scale(1)';
-            }, 3000);
+                // 第一次弹窗
+                showRandomPopup();
+                
+                // 设置定时器，每15-25秒随机弹窗
+                setInterval(() => {
+                    showRandomPopup();
+                }, 15000 + Math.random() * 10000);
+                
+                // 每30秒显示一次特别祝福
+                setInterval(() => {
+                    showSpecialPopup();
+                }, 30000);
+            }, 5000);
         }
         
         // 页面初始化
         function init() {
-            setRecipientName();
-            startCountdown();
+            createStars();
             
             // 点击开场画面开始
             opening.addEventListener('click', function() {
@@ -538,6 +594,8 @@
                         mainContent.style.opacity = '1';
                         // 尝试播放音乐
                         playMusic();
+                        // 开始随机弹窗
+                        startRandomPopups();
                     }, 300);
                 }, 800);
             });
@@ -545,8 +603,16 @@
             // 音乐控制按钮
             musicControl.addEventListener('click', toggleMusic);
             
-            // 吹蜡烛按钮
-            blowCandleButton.addEventListener('click', blowCandle);
+            // 弹窗关闭按钮
+            popupClose.addEventListener('click', function() {
+                popupOverlay.style.display = 'none';
+            });
+            
+            // 更多祝福按钮
+            moreBlessingsBtn.addEventListener('click', showRandomPopup);
+            
+            // 特别祝福按钮
+            specialMessageBtn.addEventListener('click', showSpecialPopup);
             
             // 微信内自动播放音乐处理
             document.addEventListener('WeixinJSBridgeReady', function() {
